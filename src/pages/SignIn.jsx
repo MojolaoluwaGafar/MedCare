@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router";
-
+import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 export default function SignIn() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <div className="min-h-screen grid grid-cols-1 md:grid-cols-2">
       <div className="hidden md:flex items-center justify-center">
@@ -35,11 +38,20 @@ export default function SignIn() {
               <label className="block text-gray-700 font-semibold mb-1">
                 Password
               </label>
-              <input
-                type="password"
-                placeholder="••••••••"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="••••••••"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword((prev) => !prev)}
+                  className="absolute inset-y-0 right-3 flex items-center text-gray-500 hover:text-gray-700"
+                >
+                  {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                </button>
+              </div>
             </div>
 
             <div className="flex items-center justify-between text-sm text-gray-600">
@@ -62,7 +74,10 @@ export default function SignIn() {
 
           <p className="mt-6 text-center text-gray-600 text-sm">
             Don’t have an account?{" "}
-            <span onClick={() => navigate("/signup")} className="text-blue-600 hover:underline">
+            <span
+              onClick={() => navigate("/signup")}
+              className="text-blue-600 hover:underline cursor-pointer"
+            >
               Register here
             </span>
           </p>
