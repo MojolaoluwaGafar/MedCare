@@ -48,7 +48,7 @@ export default function SignUp() {
     }
     setLoading(true);
     try {
-      const res = await fetch("https://medcare-backend-f2xm.onrender.com", {
+      const res = await fetch("https://medcare-backend-f2xm.onrender.com/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
