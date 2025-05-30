@@ -1,9 +1,9 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Landing from './pages/Landing.jsx';
-import SignIn from './pages/signin.jsx';
+import SignIn from './pages/Signin.jsx';
 import SignUp from './pages/SignUp.jsx';
-import Home from "./pages/Home.jsx"
+import Home from "./pages/Home.jsx";
 import AvailableDr from './pages/AvailableDr.jsx';
 import MyAppointments from './pages/MyAppointments.jsx';
 import BookAppointment from "./pages/BookAppointment";
