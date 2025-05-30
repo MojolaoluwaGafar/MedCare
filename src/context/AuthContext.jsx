@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
   const login = async ( email, password) => {
     try {
       const response = await fetch(
-        "http://localhost:4000/api/auth/login",
+        "https://medcare-backend-f2xm.onrender.com",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
