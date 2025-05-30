@@ -28,7 +28,7 @@ export default function Landing() {
             Sign In
           </button>
           <button
-            onClick={() => navigate("/register")}
+            onClick={() => navigate("/signup")}
             className="py-2 px-5 bg-blue-600 rounded-md text-lg text-white hover:translate-1.5 hover:bg-blue-900"
           >
             Register

@@ -17,9 +17,9 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/book-appointments" element={<AvailableDr />} />
-        <Route path="/myappointments" element={<MyAppointments />} />
-        <Route path="/book-appointment/:id" element={<BookAppointment />} />
+        <Route path="/available-doctors" element={<AvailableDr />} />
+        <Route path="/my-appointments" element={<MyAppointments />} />
+        <Route path="/book/:doctorId" element={<BookAppointment />} />
       </Routes>
     </>
   );

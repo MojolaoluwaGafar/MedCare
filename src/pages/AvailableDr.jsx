@@ -60,7 +60,7 @@ export default function AvailableDr() {
                   ))}
                 </ul>
                 <button
-                  onClick={() => navigate(`/book-appointment/${doctor.id}`)}
+                  onClick={() => navigate(`/book/${doctor.id}`)}
                   className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition"
                 >
                   Book Appointment
